@@ -33,6 +33,12 @@ Route::get('/typography', function () {
     return view('frontend.typography');
 });
 
+Auth::routes(['register' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/produk', 'ProdukController@index')->name('produk');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
