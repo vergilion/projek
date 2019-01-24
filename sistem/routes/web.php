@@ -34,7 +34,7 @@ Route::get('/typography', function () {
 });
 
 Auth::routes(['register' => false]);
-
+Route::resource('produk', 'ProdukController');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/produk', 'ProdukController@index')->name('produk');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
